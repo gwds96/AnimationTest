@@ -1,20 +1,16 @@
-//
-//  ViewController.swift
-//  Animation
-//
-//  Created by Datt-D1 on 12/26/18.
-//  Copyright © 2018 Datt-D1. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rotateLable: UILabel!
+    @IBOutlet weak var upLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        UIView.animate(withDuration: 5) {
+            self.rotateLable.transform = CGAffineTransform.init(translationX: 50, y: 150)
+            self.upLable.transform = CGAffineTransform.init(translationX: 50, y: 0)
+        }
     }
-
-
 }
 
